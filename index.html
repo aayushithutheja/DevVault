@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevVault is a curated directory of programming resources for students and developers.">
+  <title>DevVault — Your Developer Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-symbol">&lt;/&gt;</span><span>dev<span class="brand-light">vault</span><i>.</i></span></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="nav-current" href="#explore">Explore</a><a href="#saved-section">Saved <span id="saved-nav-count">0</span></a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer"><span>↗</span> GitHub</a>
+  </header>
+
+  <main>
+    <section class="hero" id="explore">
+      <div class="status-line"><span class="pulse"></span> YOUR NEXT DISCOVERY STARTS HERE</div>
+      <h1>Every tool you need.<br><span>One place to find it.</span></h1>
+      <p class="hero-copy">A curated corner of the internet for people who love to build.<br class="desktop-break"> Find your next favorite developer resource.</p>
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="search" id="search-input" placeholder="Search tools, topics, or resources..." autocomplete="off" aria-label="Search developer resources">
+        <kbd>⌘ K</kbd>
+      </div>
+      <div class="hero-meta"><span><b id="resource-count">0</b> curated resources</span><span class="meta-dot">•</span><span>Made for curious minds <span class="sparkle">✳</span></span></div>
+    </section>
+
+    <section class="library-section">
+      <div class="section-heading">
+        <div><p class="section-kicker">THE COLLECTION</p><h2>Explore the vault<span class="heading-period">.</span></h2></div>
+        <div class="view-toggle" aria-label="View mode"><button class="view-btn active" id="grid-view" aria-label="Grid view">▦</button><button class="view-btn" id="list-view" aria-label="List view">☷</button></div>
+      </div>
+      <div class="category-row" id="category-row" aria-label="Filter by category">
+        <button class="category-chip selected" data-category="All">✦ All resources</button>
+        <button class="category-chip" data-category="Learn">◈ Learn</button>
+        <button class="category-chip" data-category="Practice">⌘ Practice</button>
+        <button class="category-chip" data-category="Build">⚒ Build</button>
+        <button class="category-chip" data-category="AI & Data">◉ AI &amp; Data</button>
+        <button class="category-chip" data-category="Tools">✳ Tools</button>
+      </div>
+      <div class="results-line"><span id="results-label">Showing all resources</span><select id="sort-select" aria-label="Sort resources"><option value="featured">Sort: Featured</option><option value="az">Name: A–Z</option></select></div>
+      <div class="resource-grid" id="resource-grid"></div>
+      <div class="no-results" id="no-results" hidden><span>⌕</span><h3>No resources found</h3><p>Try a different search or category.</p><button class="reset-btn" id="reset-filters">Clear filters</button></div>
+    </section>
+
+    <section class="saved-section" id="saved-section">
+      <div class="saved-heading"><div><p class="section-kicker">YOUR PERSONAL COLLECTION</p><h2>Saved for later<span class="heading-period">.</span></h2></div><span class="saved-count" id="saved-count">0 saved</span></div>
+      <div class="saved-content" id="saved-content"><span class="bookmark-big">⌑</span><div><strong>Your vault is waiting.</strong><p>Bookmark resources you want to explore later.</p></div></div>
+    </section>
+    <section class="about-strip" id="about"><span class="about-icon">✳</span><div><strong>Built for the builder in you.</strong><p>DevVault is a student project that makes discovering developer resources easier. Explore, save, and keep learning.</p></div><a href="#explore">Back to top ↑</a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-symbol">&lt;/&gt;</span><span>dev<span class="brand-light">vault</span><i>.</i></span></a><span>Curiosity is your best tool. <span class="footer-purple">Keep building.</span></span><span>© 2026 DevVault</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
